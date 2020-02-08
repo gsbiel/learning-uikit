@@ -24,9 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
         //Criando um ViewController
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = UIColor.blue
-        
+        let viewController = ViewController()
+
         //Atribuindo o viewController como sendo o ViewController principal da aplicacao
         window?.rootViewController = viewController
         
