@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     private var loginTextField: UITextField = {
         let textField = UITextField()
+        textField.placeholder = "Your user name here"
         textField.backgroundColor = UIColor.white
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     
     private var passwordTextField: UITextField = {
         let passwordField = UITextField()
+        passwordField.placeholder = "Your password here"
+        passwordField.isSecureTextEntry = true
         passwordField.backgroundColor = UIColor.white
         passwordField.borderStyle = .roundedRect
         passwordField.translatesAutoresizingMaskIntoConstraints = false
@@ -66,6 +69,13 @@ class ViewController: UIViewController {
     
     @objc private func loginButtonPressed() {
         print("Login button has been pressed!")
+        if loginTextField.text != "" && passwordTextField.text! != "" {
+            print("Login: \(loginTextField.text!)")
+            print("Password inserted.")
+        }else{
+            print("Missing entry data.")
+        }
+        
     }
     
     private func setUpAutoLayout() {
