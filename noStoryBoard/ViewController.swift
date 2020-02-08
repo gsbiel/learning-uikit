@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     
     // Criando o container onde vai entrar os elementos do formulario de login
     private var loginContentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.green
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+        let loginView = UIView()
+        loginView.backgroundColor = UIColor.gray
+        loginView.translatesAutoresizingMaskIntoConstraints = false
+        return loginView
     }()
     
     private var loginTextField: UITextField = {
@@ -57,8 +57,41 @@ class ViewController: UIViewController {
         
         view.addSubview(loginContentView)
         
+        // Estou configurando a funcao que vai ser chamada quando o botao de login for pressionado
+        loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
+        
+        setUpAutoLayout()
+        
     }
-
-
+    
+    @objc private func loginButtonPressed() {
+        print("Login button has been pressed!")
+    }
+    
+    private func setUpAutoLayout() {
+        // Login Container
+        loginContentView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        loginContentView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        loginContentView.heightAnchor.constraint(equalToConstant: view.frame.height/3).isActive = true
+        loginContentView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        // Login Text Field
+        loginTextField.topAnchor.constraint(equalTo: loginContentView.topAnchor, constant: 40).isActive = true
+        loginTextField.leftAnchor.constraint(equalTo: loginContentView.leftAnchor, constant: 20).isActive = true
+        loginTextField.rightAnchor.constraint(equalTo: loginContentView.rightAnchor, constant: -20).isActive = true
+        loginTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        // Password Text Field
+        passwordTextField.leftAnchor.constraint(equalTo: loginContentView.leftAnchor, constant: 20).isActive = true
+        passwordTextField.rightAnchor.constraint(equalTo: loginContentView.rightAnchor, constant: -20).isActive = true
+        passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 20).isActive = true
+        passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        // LoginButton
+        loginButton.leftAnchor.constraint(equalTo: loginContentView.leftAnchor, constant: 20).isActive = true
+        loginButton.rightAnchor.constraint(equalTo: loginContentView.rightAnchor, constant: -20).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20).isActive = true
+    }
 }
 
