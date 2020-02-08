@@ -10,23 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Criando um UIWindow com as mesmas dimensioes da tela do iPhone.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        //Criando um ViewController
-        let viewController = UIViewController()
-        
-        //Atribuindo o viewController como sendo o ViewController principal da aplicacao
-        window?.rootViewController = viewController
-        
-        //Exibindo o ViewController principal
-        window?.makeKeyAndVisible()
-        
         
         return true
     }
