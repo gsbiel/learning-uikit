@@ -13,9 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loginScreenView = LoginScreen(frame:CGRect.zero)
+        let loginScreenView = LoginScreen(frame:UIScreen.main.bounds)
         self.view.addSubview(loginScreenView)
-        
         
     }
     
