@@ -8,8 +8,9 @@
 
 import UIKit
 
-class LoginScreen: UIView {
+class LoginScreen: UIView{
     
+//MARK: - Custom Components
     // Criando o container onde vai entrar os elementos do formulario de login
     private lazy var loginContentView: UIView = {
         let loginView = UIView()
@@ -48,6 +49,7 @@ class LoginScreen: UIView {
         return loginBtn
     }()
     
+//MARK: - init functions
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -57,15 +59,19 @@ class LoginScreen: UIView {
         super.init(coder: coder)
         setupView()
     }
-    
+//MARK: - Setting up the custom view and auto layout
     private func setupView() {
-        self.backgroundColor = UIColor.orange
+        self.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        
         loginContentView.addSubview(loginTextField)
         loginContentView.addSubview(passwordTextField)
         loginContentView.addSubview(loginButton)
         self.addSubview(loginContentView)
         setupLayout()
         setupActions()
+        
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     private func setupLayout() {
@@ -94,7 +100,7 @@ class LoginScreen: UIView {
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20).isActive = true
     }
-    
+//MARK: - Configuring actions for buttons
     private func setupActions() {
         // Estou configurando a funcao que vai ser chamada quando o botao de login for pressionado
         loginButton.addTarget(self, action: #selector(loginButtonPressed), for: .touchUpInside)
@@ -108,10 +114,34 @@ class LoginScreen: UIView {
         }else{
             print("Missing entry data.")
         }
+        dismissKeyboards()
+        cleanTextFields()
+    }
+    
+    private func dismissKeyboards() {
+        loginTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+    }
+    private func cleanTextFields() {
+        loginTextField.text = ""
+        passwordTextField.text = ""
     }
     
     override class var requiresConstraintBasedLayout: Bool {
         return true
     }
 
+}
+
+//MARK: - UITextField Delegate Methods
+extension LoginScreen: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        loginTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+    }
 }

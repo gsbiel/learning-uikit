@@ -25,9 +25,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //Criando um ViewController
         let viewController = ViewController()
-
+        
+        // Criando um NavigationController
+        let navController = UINavigationController(rootViewController: viewController)
+        
         //Atribuindo o viewController como sendo o ViewController principal da aplicacao
-        window?.rootViewController = viewController
+        window?.rootViewController = navController
         
         //Exibindo o ViewController principal
         window?.makeKeyAndVisible()
