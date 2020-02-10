@@ -24,10 +24,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
 
         //Criando um ViewController
-        let viewController = ViewController()
+        let loginScreenVC = ViewController()
+        let searchScreenVC = SearchScreenViewController()
         
         // Criando um NavigationController
-        let navController = UINavigationController(rootViewController: viewController)
+        let navController = UINavigationController(rootViewController: searchScreenVC)
+        
         
         //Atribuindo o viewController como sendo o ViewController principal da aplicacao
         window?.rootViewController = navController

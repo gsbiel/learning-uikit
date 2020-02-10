@@ -15,6 +15,7 @@
 		8965ACDD23F1889400F80509 /* SearchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACDC23F1889400F80509 /* SearchScreenView.swift */; };
 		8965ACE023F18BED00F80509 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACDF23F18BED00F80509 /* Contact.swift */; };
 		8965ACE223F18BFB00F80509 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACE123F18BFB00F80509 /* ContactAPI.swift */; };
+		8965ACE623F190CD00F80509 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */; };
 		8986352C23F0A73100528BF1 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986352B23F0A73100528BF1 /* LoginScreenView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		8965ACDC23F1889400F80509 /* SearchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenView.swift; sourceTree = "<group>"; };
 		8965ACDF23F18BED00F80509 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		8965ACE123F18BFB00F80509 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
+		8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
 		8986352B23F0A73100528BF1 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,9 +67,9 @@
 				8965ACE323F18C5800F80509 /* API */,
 				8965ACDE23F18BC400F80509 /* Model */,
 				8953CA5E23EF5DA2000E0061 /* View */,
+				8965ACE423F190A000F80509 /* Controller */,
 				8953CA4A23EF49C9000E0061 /* AppDelegate.swift */,
 				8953CA4C23EF49C9000E0061 /* SceneDelegate.swift */,
-				8953CA4E23EF49C9000E0061 /* ViewController.swift */,
 				8953CA5323EF49CC000E0061 /* Assets.xcassets */,
 				8953CA5523EF49CC000E0061 /* LaunchScreen.storyboard */,
 				8953CA5823EF49CC000E0061 /* Info.plist */,
@@ -98,6 +100,15 @@
 				8965ACE123F18BFB00F80509 /* ContactAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		8965ACE423F190A000F80509 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8953CA4E23EF49C9000E0061 /* ViewController.swift */,
+				8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8965ACE623F190CD00F80509 /* SearchScreenViewController.swift in Sources */,
 				8965ACE023F18BED00F80509 /* Contact.swift in Sources */,
 				8986352C23F0A73100528BF1 /* LoginScreenView.swift in Sources */,
 				8953CA4F23EF49C9000E0061 /* ViewController.swift in Sources */,
