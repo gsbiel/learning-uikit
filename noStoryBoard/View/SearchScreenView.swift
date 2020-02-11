@@ -10,10 +10,11 @@ import UIKit
 
 class SearchScreen: UIView {
     
-    private lazy var searchResults: UITableView = {
+    lazy var searchResults: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor.white
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactCell")
         return tableView
     }()
     
