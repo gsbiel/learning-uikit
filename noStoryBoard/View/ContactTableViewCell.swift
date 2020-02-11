@@ -111,15 +111,15 @@ class ContactTableViewCell: UITableViewCell {
     private func setupLayout() {
         
         // Profile Image View
-        profileImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
-        profileImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
+        profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         
         // Container View
-        containerView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
+        containerView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo: self.profileImageView.trailingAnchor, constant: 10).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // Name Label«
@@ -135,8 +135,8 @@ class ContactTableViewCell: UITableViewCell {
         // Country Image View
         countryImageView.widthAnchor.constraint(equalToConstant: 26).isActive = true
         countryImageView.heightAnchor.constraint(equalToConstant: 26).isActive = true
-        countryImageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -26).isActive = true
-        countryImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
+        countryImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -26).isActive = true
+        countryImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
     }
     

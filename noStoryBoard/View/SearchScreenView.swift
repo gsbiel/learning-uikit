@@ -15,6 +15,7 @@ class SearchScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor.white
         tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: "contactCell")
+        tableView.separatorStyle = .none
         return tableView
     }()
     
