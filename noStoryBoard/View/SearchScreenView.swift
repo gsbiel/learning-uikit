@@ -14,7 +14,7 @@ class SearchScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor.white
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "contactCell")
+        tableView.register(ContactTableViewCell.self, forCellReuseIdentifier: "contactCell")
         return tableView
     }()
     
@@ -34,10 +34,10 @@ class SearchScreen: UIView {
     }
     
     private func setupLayout() {
-        searchResults.topAnchor.constraint(equalTo: self.topAnchor, constant: 5.0).isActive = true
-        searchResults.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 5.0).isActive = true
-        searchResults.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        searchResults.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        searchResults.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+        searchResults.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        searchResults.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        searchResults.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
     override class var requiresConstraintBasedLayout: Bool {

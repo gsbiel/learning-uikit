@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892B7E2123F2CD4E00A7C919 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B7E2023F2CD4E00A7C919 /* ContactTableViewCell.swift */; };
 		8953CA4B23EF49C9000E0061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953CA4A23EF49C9000E0061 /* AppDelegate.swift */; };
 		8953CA4D23EF49C9000E0061 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953CA4C23EF49C9000E0061 /* SceneDelegate.swift */; };
 		8953CA4F23EF49C9000E0061 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953CA4E23EF49C9000E0061 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		892B7E2023F2CD4E00A7C919 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		8953CA4723EF49C9000E0061 /* noStoryBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noStoryBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8953CA4A23EF49C9000E0061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8953CA4C23EF49C9000E0061 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				8986352B23F0A73100528BF1 /* LoginScreenView.swift */,
 				8965ACDC23F1889400F80509 /* SearchScreenView.swift */,
+				892B7E2023F2CD4E00A7C919 /* ContactTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				8953CA4F23EF49C9000E0061 /* ViewController.swift in Sources */,
 				8953CA4B23EF49C9000E0061 /* AppDelegate.swift in Sources */,
 				8965ACE223F18BFB00F80509 /* ContactAPI.swift in Sources */,
+				892B7E2123F2CD4E00A7C919 /* ContactTableViewCell.swift in Sources */,
 				8953CA4D23EF49C9000E0061 /* SceneDelegate.swift in Sources */,
 				8965ACDD23F1889400F80509 /* SearchScreenView.swift in Sources */,
 			);
