@@ -67,7 +67,7 @@ class ContactTableViewCell: UITableViewCell {
         
         jobTitle.translatesAutoresizingMaskIntoConstraints = false
         jobTitle.font = UIFont.boldSystemFont(ofSize: 14)
-        jobTitle.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        jobTitle.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         jobTitle.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         jobTitle.layer.cornerRadius = 5
         jobTitle.clipsToBounds = true
@@ -119,7 +119,7 @@ class ContactTableViewCell: UITableViewCell {
         // Container View
         containerView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         containerView.leadingAnchor.constraint(equalTo: self.profileImageView.trailingAnchor, constant: 10).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         containerView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         // Name Label«
