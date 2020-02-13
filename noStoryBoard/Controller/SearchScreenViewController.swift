@@ -18,6 +18,7 @@ class SearchScreenViewController: UIViewController {
         let searchView = SearchScreen(frame: UIScreen.main.bounds)
         self.view.addSubview(searchView)
         
+        // Atribuindo os delegates para que a comunicação com a TableView, presente no componente SearchScreenView, aconteça.
         searchView.searchResults.delegate = self
         searchView.searchResults.dataSource = self
         
@@ -33,6 +34,7 @@ class SearchScreenViewController: UIViewController {
 }
 
 extension SearchScreenViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.contacts.count
     }
@@ -43,6 +45,7 @@ extension SearchScreenViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
     
+    // Para cada celula sendo inserida na tabela, esse método é chamado para definir o atributo "height"
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }

@@ -26,7 +26,7 @@ class ContactTableViewCell: UITableViewCell {
             if let country = contactItem.country {
                 countryImageView.image = UIImage(named: country)
             }
-            
+
         }
     }
     
@@ -136,8 +136,7 @@ class ContactTableViewCell: UITableViewCell {
         countryImageView.widthAnchor.constraint(equalToConstant: 26).isActive = true
         countryImageView.heightAnchor.constraint(equalToConstant: 26).isActive = true
         countryImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -26).isActive = true
-        countryImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
+        countryImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true  
     }
     
     override class var requiresConstraintBasedLayout: Bool {
