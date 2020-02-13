@@ -140,4 +140,8 @@ class ContactTableViewCell: UITableViewCell {
         
     }
     
+    override class var requiresConstraintBasedLayout: Bool {
+           return true
+    }
+    
 }
