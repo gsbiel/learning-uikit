@@ -60,7 +60,7 @@ class TableHeader: UITableViewHeaderFooterView {
     
     private lazy var leftCircleView: UIView = {
         let circle = UIView()
-        circle.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        circle.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         circle.layer.cornerRadius = 35
         circle.translatesAutoresizingMaskIntoConstraints = false
         return circle
@@ -69,9 +69,15 @@ class TableHeader: UITableViewHeaderFooterView {
     private lazy var rightCircleView: UIView = {
         let circle = UIView()
         circle.layer.cornerRadius = 35
-        circle.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        circle.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         circle.translatesAutoresizingMaskIntoConstraints = false
         return circle
+    }()
+    
+    private lazy var labelContainer: UIView = {
+        let container = UIView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
     }()
     
     private lazy var headerLabel: UILabel = {
@@ -95,8 +101,9 @@ class TableHeader: UITableViewHeaderFooterView {
     
     private func setupView() {
         self.addSubview(leftCircleView)
-        self.addSubview(headerLabel)
+        labelContainer.addSubview(headerLabel)
         self.addSubview(rightCircleView)
+        self.addSubview(labelContainer)
         setupLayout()
     }
     
@@ -114,9 +121,15 @@ class TableHeader: UITableViewHeaderFooterView {
         rightCircleView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         rightCircleView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
+        // labelContainer
+        labelContainer.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        labelContainer.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        labelContainer.leadingAnchor.constraint(equalTo: leftCircleView.trailingAnchor).isActive = true
+        labelContainer.trailingAnchor.constraint(equalTo: rightCircleView.leadingAnchor).isActive = true
+        
         // headerLabel - Auto Layout
-        headerLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor ).isActive = true
-        headerLabel.leadingAnchor.constraint(equalTo: leftCircleView.trailingAnchor, constant: 20).isActive = true
+        headerLabel.centerXAnchor.constraint(equalTo: labelContainer.centerXAnchor).isActive = true
+        headerLabel.centerYAnchor.constraint(equalTo: labelContainer.centerYAnchor ).isActive = true
     }
     
     override class var requiresConstraintBasedLayout: Bool {
