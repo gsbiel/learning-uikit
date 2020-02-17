@@ -18,6 +18,8 @@
 		8965ACE223F18BFB00F80509 /* ContactAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACE123F18BFB00F80509 /* ContactAPI.swift */; };
 		8965ACE623F190CD00F80509 /* SearchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */; };
 		8986352C23F0A73100528BF1 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986352B23F0A73100528BF1 /* LoginScreenView.swift */; };
+		89A9B6CD23F77E0900DC4592 /* SettingsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9B6CC23F77E0900DC4592 /* SettingsScreenView.swift */; };
+		89A9B6CF23F77FB500DC4592 /* SettingsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A9B6CE23F77FB500DC4592 /* SettingsScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8965ACE123F18BFB00F80509 /* ContactAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAPI.swift; sourceTree = "<group>"; };
 		8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenViewController.swift; sourceTree = "<group>"; };
 		8986352B23F0A73100528BF1 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		89A9B6CC23F77E0900DC4592 /* SettingsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenView.swift; sourceTree = "<group>"; };
+		89A9B6CE23F77FB500DC4592 /* SettingsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				8986352B23F0A73100528BF1 /* LoginScreenView.swift */,
 				8965ACDC23F1889400F80509 /* SearchScreenView.swift */,
 				892B7E2023F2CD4E00A7C919 /* ContactTableViewCell.swift */,
+				89A9B6CC23F77E0900DC4592 /* SettingsScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 			children = (
 				8953CA4E23EF49C9000E0061 /* ViewController.swift */,
 				8965ACE523F190CD00F80509 /* SearchScreenViewController.swift */,
+				89A9B6CE23F77FB500DC4592 /* SettingsScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,9 +192,11 @@
 			files = (
 				8965ACE623F190CD00F80509 /* SearchScreenViewController.swift in Sources */,
 				8965ACE023F18BED00F80509 /* Contact.swift in Sources */,
+				89A9B6CF23F77FB500DC4592 /* SettingsScreenViewController.swift in Sources */,
 				8986352C23F0A73100528BF1 /* LoginScreenView.swift in Sources */,
 				8953CA4F23EF49C9000E0061 /* ViewController.swift in Sources */,
 				8953CA4B23EF49C9000E0061 /* AppDelegate.swift in Sources */,
+				89A9B6CD23F77E0900DC4592 /* SettingsScreenView.swift in Sources */,
 				8965ACE223F18BFB00F80509 /* ContactAPI.swift in Sources */,
 				892B7E2123F2CD4E00A7C919 /* ContactTableViewCell.swift in Sources */,
 				8953CA4D23EF49C9000E0061 /* SceneDelegate.swift in Sources */,
