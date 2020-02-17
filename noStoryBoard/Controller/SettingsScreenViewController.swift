@@ -26,7 +26,16 @@ class SettingsScreenViewController: UIViewController {
 }
 
 extension SettingsScreenViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 8
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Secao: \(section)")
+        if section == 0 {
+            return 0
+        }
         return 1
     }
     
@@ -37,13 +46,18 @@ extension SettingsScreenViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.bounds.height/2.0
+        if section == 0 {
+            return tableView.bounds.height/2.0
+        }
+        return 30
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "settingsHeaderCell") as! SettingsTableHeader
-        
-        return header
+        if section == 0 {
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "settingsHeaderCell") as! SettingsTableHeader
+            return header
+        }
+       return nil
     }
     
     

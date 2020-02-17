@@ -45,12 +45,13 @@ class SettingsScreen: UIView {
     
 }
 
+// MARK: - Header da tabela
+
 class SettingsTableHeader: UITableViewHeaderFooterView {
     
     private lazy var headerContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.8551442952, green: 0.8712790933, blue: 0.8390094972, alpha: 1)
         return view
     }()
     
@@ -58,7 +59,7 @@ class SettingsTableHeader: UITableViewHeaderFooterView {
         let image = UIView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = 60
-        image.backgroundColor = UIColor.brown
+        image.backgroundColor = UIColor.systemPink
         return image
     }()
     
@@ -179,6 +180,57 @@ class SettingsTableHeader: UITableViewHeaderFooterView {
         // See profile
         seeProfile.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 5).isActive = true
         seeProfile.centerXAnchor.constraint(equalTo: userInfoContainer.centerXAnchor).isActive = true
+    }
+    
+    override class var requiresConstraintBasedLayout: Bool {
+        return true
+    }
+}
+
+//MARK: - Header das secoes da tabela
+class SettingsSectionsHeader: UITableViewHeaderFooterView {
+    
+    private lazy var viewContainer: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    private lazy var sectionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
+        return label
+    }()
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+    
+    private func setupView() {
+        viewContainer.addSubview(sectionLabel)
+        self.addSubview(viewContainer)
+        setupLayout()
+    }
+    
+    private func setupLayout() {
+        // View Container
+        viewContainer.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        viewContainer.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        viewContainer.leftAnchor.constraint(lessThanOrEqualTo: self.leftAnchor).isActive = true
+        viewContainer.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
+        // Section Label
+        sectionLabel.centerYAnchor.constraint(equalTo: viewContainer.centerYAnchor).isActive = true
+        sectionLabel.leadingAnchor.constraint(equalTo: viewContainer.leadingAnchor, constant: 10).isActive = true
     }
     
     override class var requiresConstraintBasedLayout: Bool {
