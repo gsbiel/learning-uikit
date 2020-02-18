@@ -14,6 +14,8 @@ class SettingsScreen: UIView {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(SettingsTableHeader.self, forHeaderFooterViewReuseIdentifier: "settingsHeaderCell")
+        tableView.register(SettingsSectionsHeader.self, forHeaderFooterViewReuseIdentifier: "settingsSectionCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "tableViewCell")
         return tableView
     }()
     
@@ -197,7 +199,7 @@ class SettingsSectionsHeader: UITableViewHeaderFooterView {
         return view
     }()
     
-    private lazy var sectionLabel: UILabel = {
+    lazy var sectionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 18)
